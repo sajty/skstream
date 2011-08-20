@@ -10,7 +10,7 @@ AC_CANONICAL_HOST
 
 dnl Initialise automake
 
-AM_INIT_AUTOMAKE([nostdinc dist-bzip2 check-news color-tests])
+AM_INIT_AUTOMAKE([nostdinc dist-bzip2 check-news])
 
 SKSTREAM_CURRENT=6
 SKSTREAM_REVISION=0
@@ -29,8 +29,8 @@ AC_SUBST(SKSTREAM_VERSION_INFO)
 AC_SUBST(SKSTREAM_VERSION_NO)
 
 dnl Test for GNU libtool
-
-LT_INIT([disable-static])
+AC_DISABLE_STATIC
+AC_PROG_LIBTOOL
 
 dnl Test for C++ compiler
 
